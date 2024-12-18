@@ -1,0 +1,13 @@
+services:
+
+    quickdrop:
+        image: roastslav/quickdrop:latest
+        container_name: quickdrop
+        restart: unless-stopped 
+        ports:
+            - "8280:8080"
+        volumes:
+            - ./qdrop/db:/app/db
+            - ./qdrop/log:/app/log
+            - ./qdrop/files:/app/files
+
