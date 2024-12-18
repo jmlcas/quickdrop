@@ -10,4 +10,7 @@ services:
             - ./qdrop/db:/app/db
             - ./qdrop/log:/app/log
             - ./qdrop/files:/app/files
-
+        environment:
+            - max_upload_file_size=1GB
+            - app_enable_password=true   # false
+            - app_basic_password=p4ssw0rd
